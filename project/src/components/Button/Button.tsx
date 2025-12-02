@@ -1,10 +1,11 @@
 type ButtonProps = {
-    text: string;
+    text: string,
+    clickFunction?: () => void
 }
 
-const Button = ({text}: ButtonProps) => {
+const Button = ({text, clickFunction}: ButtonProps) => {
   return (
-    <button className="bg-[rgba(252,175,23,1)] px-12 py-[15px] rounded-lg font-bold text-[rgba(2,2,2,1)] text-[20px] leading-[150%] tracking-[-1.1%] hover:bg-[#c48508]">
+    <button onClick={clickFunction} className="bg-[rgba(252,175,23,1)] px-12 py-[15px] rounded-lg font-bold text-[rgba(2,2,2,1)] text-[20px] leading-[150%] tracking-[-1.1%] hover:bg-[#c48508]">
         {text}
     </button>
   )

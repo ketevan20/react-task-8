@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
 import GameCard from '../GameCard/GameCard'
 import image1 from '/images/game1.png'
@@ -25,10 +26,10 @@ const FeaturedGames = () => {
         </div>
 
         <div className="mb-16 flex justify-between">
-            <GameCard imagePath={image1}/>
-            <GameCard imagePath={image2}/>
-            <GameCard imagePath={image3}/>
-            <GameCard imagePath={image4}/>
+            <Link to={'/gallery/1'}><GameCard imagePath={image1}/></Link>
+            <Link to={'/gallery/2'}><GameCard imagePath={image2}/></Link>
+            <Link to={'gallery/3'}><GameCard imagePath={image3}/></Link>
+            <Link to={'gallery/4'}><GameCard imagePath={image4}/></Link>
         </div>
 
         <div className='text-center'><Button text='Ver todos os jogos'/></div>

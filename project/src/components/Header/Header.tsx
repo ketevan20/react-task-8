@@ -3,6 +3,7 @@ import arrow from '/images/arrow_drop_down.svg'
 import Button from '../Button/Button'
 import search from '/images/search.png'
 import person from '/images/person.png'
+import { Link } from 'react-router-dom'
 
 export const Header = () => {
   return (
@@ -16,8 +17,8 @@ export const Header = () => {
               <p className="text-[rgba(255,255,255,1)] font-medium text-[16px] leading-[150%] tracking-[-1.1%] hover:text-[rgba(252,175,23,1)] hover:cursor-pointer">Jogos</p>
               <img src={arrow} alt="" />
             </div>
-            <p className="text-[rgba(255,255,255,1)] font-medium text-[16px] leading-[150%] tracking-[-1.1%] hover:text-[rgba(252,175,23,1)] hover:cursor-pointer">Loja</p>
-            <p className="text-[rgba(255,255,255,1)] font-medium text-[16px] leading-[150%] tracking-[-1.1%] hover:text-[rgba(252,175,23,1)] hover:cursor-pointer">Ajuda</p>
+            <Link to={"/store"}><p className="text-[rgba(255,255,255,1)] font-medium text-[16px] leading-[150%] tracking-[-1.1%] hover:text-[rgba(252,175,23,1)] hover:cursor-pointer">Loja</p></Link>
+            <Link to={"/help"}><p className="text-[rgba(255,255,255,1)] font-medium text-[16px] leading-[150%] tracking-[-1.1%] hover:text-[rgba(252,175,23,1)] hover:cursor-pointer">Ajuda</p></Link>
           </div>
         </div>
 
