@@ -1,7 +1,8 @@
+import { motion } from 'motion/react'
 
 const NewsFeed = () => {
     return (
-        <div className="w-[1160px] my-[112.15px]">
+        <motion.div initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} transition={{duration: 2}} className="w-[1160px] my-[112.15px]">
             <p className="text-[rgba(246,246,246,1)] font-extrabold text-[48px] leading-[150%] tracking-[-1.1%]">Últimas Notícias</p>
 
             <div className="mt-10 flex gap-10 h-[488px]">
@@ -32,7 +33,7 @@ const NewsFeed = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

@@ -1,8 +1,9 @@
 import Button from "../Button/Button"
+import { motion } from 'motion/react'
 
 const GamesLauncher = () => {
     return (
-        <div className="relative w-[1160px] h-[535px] mb-[95px] bg-[url('/images/launcherBackground.png')] rounded-2xl flex items-center overflow-hidden">
+        <motion.div initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} transition={{duration: 2}} className="relative w-[1160px] h-[535px] mb-[95px] bg-[url('/images/launcherBackground.png')] rounded-2xl flex items-center overflow-hidden">
             
             <div className="ml-[76px]">
                 <div className="max-w-[462px] flex gap-[18px] items-center">
@@ -15,7 +16,7 @@ const GamesLauncher = () => {
 
             <img className="absolute right-[-351px] h-[471px]" src="/images/launcher.png" alt="" />
 
-        </div>
+        </motion.div>
     )
 }
 

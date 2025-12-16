@@ -4,6 +4,7 @@ import Button from '../Button/Button'
 import search from '/images/search.png'
 import person from '/images/person.png'
 import { Link } from 'react-router-dom'
+import { motion } from 'motion/react'
 
 export const Header = () => {
   return (
@@ -11,7 +12,7 @@ export const Header = () => {
       <div className="w-[1160px] flex justify-between">
 
         <div className='flex gap-[47px] items-center'>
-          <img src={logo} alt="" />
+          <motion.img animate={{scale:[0.8, 1, 0.8]}} transition={{duration: 1, repeat: Infinity, ease: "easeInOut"}} src={logo} alt="logo" />
           <div className='flex gap-6'>
             <div className='flex items-center'>
               <p className="text-[rgba(255,255,255,1)] font-medium text-[16px] leading-[150%] tracking-[-1.1%] hover:text-[rgba(252,175,23,1)] hover:cursor-pointer">Jogos</p>
@@ -25,13 +26,13 @@ export const Header = () => {
         <div className='flex gap-6 items-center'>
           <Button text='Baixe o Launcher' />
 
-          <div className='w-12 h-12 bg-[rgba(90,90,90,1)] rounded-full flex items-center justify-center hover:bg-[#454545] hover:cursor-pointer'>
+          <motion.div whileHover={{scale: 1.05}} whileTap={{scale: 1.1}} className='w-12 h-12 bg-[rgba(90,90,90,1)] rounded-full flex items-center justify-center hover:bg-[#454545] hover:cursor-pointer'>
             <img src={search} alt="" />
-          </div>
+          </motion.div>
 
-          <div className='w-12 h-12 bg-[rgba(90,90,90,1)] rounded-full flex items-center justify-center hover:bg-[#454545] hover:cursor-pointer'>
+          <motion.div whileHover={{scale: 1.05}} whileTap={{scale: 1.1}} className='w-12 h-12 bg-[rgba(90,90,90,1)] rounded-full flex items-center justify-center hover:bg-[#454545] hover:cursor-pointer'>
             <img src={person} alt="" />
-          </div>
+          </motion.div>
         </div>
 
       </div>
