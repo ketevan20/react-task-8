@@ -7,24 +7,8 @@ import Gallery from './components/Gallery/Gallery'
 import { Header } from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import { motion } from 'motion/react'
-import { useEffect, useState } from 'react'
-import Loader from './components/Loader/Loader'
 
 const App = () => {
-  const [loading, setLoading] = useState(true) 
-
-  useEffect(() => {
-    const handleLoad = () => setLoading(false)
-    window.addEventListener("load", handleLoad)
-
-    return () => window.removeEventListener("load", handleLoad)
-  }, [])
-
-  if (loading) {
-    return (
-      <Loader/>
-    )
-  }
 
   return (
     <>
